@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane fx:id="content" prefHeight="670.0" prefWidth="1280.0" stylesheets="@../css/Game.css"
+      xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.project.view.GameView">
+    <children>
+        <!--        <Pane layoutX="-2.0" layoutY="609.0" prefHeight="63.0" prefWidth="1288.0" />-->
+        <Label fx:id="airplaneHP" alignment="CENTER" layoutX="27.0" layoutY="669.0" prefHeight="44.0" prefWidth="84.0"
+               text="HP: 5">
+            <font>
+                <Font size="23.0"/>
+            </font>
+        </Label>
+        <Label fx:id="bossHealth" layoutX="1201.0" layoutY="674.0" text="100%">
+            <font>
+                <Font size="23.0"/>
+            </font>
+        </Label>
+        <Label fx:id="score" layoutX="610.0" layoutY="30.0" text="score: 0">
+            <font>
+                <Font size="23.0"/>
+            </font>
+        </Label>
+        <Label fx:id="clock" layoutX="620.0" layoutY="674.0" text="00:00">
+            <font>
+                <Font size="23.0"/>
+            </font>
+        </Label>
+        <Pane fx:id="end" layoutX="498.0" layoutY="229.0" prefHeight="247.0" prefWidth="304.0" styleClass="pane"
+              visible="false">
+            <children>
+                <Label fx:id="finalTime" layoutX="105.0" layoutY="131.0" prefHeight="34.0" prefWidth="110.0"
+                       text="time: 0">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="finalScore" layoutX="110.0" layoutY="99.0" prefHeight="34.0" prefWidth="110.0"
+                       text="score: 0">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="returnMain" layoutX="67.0" layoutY="200.0" mnemonicParsing="false"
+                        onMouseClicked="#returnMain" prefHeight="34.0" prefWidth="170.0" styleClass="Button"
+                        text="return to main menu"/>
+                <Label fx:id="state" layoutX="115.0" layoutY="24.0" prefHeight="55.0" prefWidth="146.0" text="Label">
+                    <font>
+                        <Font size="27.0"/>
+                    </font>
+                </Label>
+                <Button layoutX="130.0" layoutY="172.0" mnemonicParsing="false" text="replay" styleClass="Button"
+                        onMouseClicked="#replay"/>
+            </children>
+        </Pane>
+
+    </children>
+</Pane>

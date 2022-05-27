@@ -1,0 +1,24 @@
+.mainPane{
+    -fx-background-image: url("../images/Picture1.png");
+    /*-fx-background-size: contain, contain, contain, contain, contain, contain;*/
+    /*-fx-background-position: bottom, bottom, bottom, bottom, bottom, bottom;*/
+    -fx-background-size: cover;
+}
+
+
+.ImageSelectVbox {
+    -fx-border-radius: 15 15 15 15;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-color: black;
+    -fx-stroke-width: 20;
+    -fx-background-color: rgba(103, 218, 198, 0.97);
+}
+
+Button {
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: #51d6e8;
+    -fx-border-color: #006dff;
+    -fx-cursor: hand;
+}
+

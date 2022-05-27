@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<Pane fx:id="pane" prefHeight="670.0" prefWidth="1280.0" styleClass="mainPane" stylesheets="@../css/LoginMenu.css"
+      xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.project.view.ProfileMenuControllerView">
+    <children>
+        <PasswordField fx:id="passField" layoutX="259.0" layoutY="312.0" onKeyTyped="#type"
+                       promptText="enter new password" visible="false"/>
+        <TextField fx:id="userField" layoutX="53.0" layoutY="312.0" promptText="enter new username" visible="false"/>
+        <Label fx:id="userLabel" layoutX="89.0" layoutY="295.0" text="new username" visible="false"/>
+        <Label fx:id="passLabel" layoutX="296.0" layoutY="295.0" text="new password" visible="false"/>
+        <Button fx:id="button1" layoutX="104.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#usernameChange"
+                text="Done!" visible="false"/>
+        <Button fx:id="button2" layoutX="310.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#passwordChange"
+                text="Done!" visible="false"/>
+        <Button layoutX="194.0" layoutY="209.0" mnemonicParsing="false" onMouseClicked="#infoChange" text="chane info"/>
+        <Button layoutX="14.0" layoutY="670.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="36.0"
+                prefWidth="71.0" text="EXIT"/>
+        <Button layoutX="94.0" layoutY="670.0" mnemonicParsing="false" onMouseClicked="#deleteAccount" prefHeight="36.0"
+                prefWidth="117.0" text="delete account"/>
+        <ImageView fx:id="profileImage" fitHeight="150.0" fitWidth="200.0" layoutX="837.0" layoutY="250.0"
+                   pickOnBounds="true" preserveRatio="true"/>
+        <Label fx:id="username" layoutX="806.0" layoutY="213.0" prefHeight="25.0" prefWidth="92.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Button onMouseClicked="#chooseFromFile" layoutX="987.0" layoutY="407.0" mnemonicParsing="false"
+                prefHeight="25.0" prefWidth="58.0" text="file"/>
+        <Button layoutX="891.0" layoutY="407.0" mnemonicParsing="false" onMouseClicked="#selectPicture"
+                prefHeight="25.0" prefWidth="77.0" text="picture"/>
+        <VBox fx:id="imageSelectVBox" layoutX="381.0" layoutY="193.0" prefHeight="328.0" prefWidth="357.0"
+              styleClass="ImageSelectVbox">
+            <children>
+                <Pane prefHeight="334.0" prefWidth="396.0">
+                    <children>
+                        <Button layoutX="142.0" layoutY="285.0" mnemonicParsing="false"
+                                onMouseClicked="#submitProfilePicture" prefHeight="25.0" prefWidth="77.0"
+                                text="submit"/>
+                        <HBox fx:id="imageHBox1" layoutX="14.0" layoutY="14.0"
+                              prefHeight="126.0" prefWidth="157.0">
+                            <children>
+                                <ImageView onMouseClicked="#changeImage" fx:id="image1" fitHeight="126.0"
+                                           fitWidth="152.0" pickOnBounds="true"
+                                           preserveRatio="true"/>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="imageHBox2" layoutX="193.0" layoutY="14.0"
+                              prefHeight="126.0" prefWidth="157.0">
+                            <children>
+                                <ImageView onMouseClicked="#changeImage" fx:id="image2" fitHeight="126.0"
+                                           fitWidth="157.0" pickOnBounds="true"
+                                           preserveRatio="true"/>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="imageHBox3" layoutX="22.0" layoutY="145.0"
+                              prefHeight="126.0" prefWidth="157.0">
+                            <children>
+                                <ImageView onMouseClicked="#changeImage" fx:id="image3" fitHeight="126.0"
+                                           fitWidth="157.0" pickOnBounds="true"
+                                           preserveRatio="true"/>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="imageHBox4" layoutX="193.0" layoutY="145.0"
+                              prefHeight="126.0" prefWidth="158.0">
+                            <children>
+                                <ImageView onMouseClicked="#changeImage" fx:id="image4" fitHeight="126.0"
+                                           fitWidth="157.0" pickOnBounds="true"
+                                           preserveRatio="true"/>
+                            </children>
+                        </HBox>
+
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+
+        <Button layoutX="1134.0" layoutY="615.0" mnemonicParsing="false" text="unmute" onMouseClicked="#muteUnMute"
+                fx:id="muteUnmute"/>
+    </children>
+</Pane>
